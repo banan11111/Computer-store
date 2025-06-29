@@ -1,0 +1,85 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #000000;
+}
+
+.container {
+    display: flex;
+    border: 2px solid #000000;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 200px;
+    border: 2px solid #ff0000;
+    margin: 10px;
+}
+
+.search-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.search {
+    display: flex;
+    flex-direction: row;
+    width: 600px;
+    height: 50px;
+    border: 2px solid #00ff00;
+    margin-top: 15px;
+    border-radius: 20px;
+
+}
+
+.search-buttons {
+    display: flex;
+    flex-direction: row;
+    
+}
+
+
+.Main, .Promotions, .Reviews, .Contacts, .About-us {
+    width: 150px;
+    height: 90px;
+    border: 2px solid #bfff00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 3px;
+    margin-top: 40px;
+    
+}
+
+.favorite, .Basket {
+    width: 100px;
+    height: 100px;
+    border: 2px solid #bfff00;
+    display: flex;
+    margin-left: 100px
+}
+
+.Categories {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #1e00ff;
+    border-radius: 15px;
+    margin-left: 10px;
+    margin-top: 10px
+}
+
+.category {
+    border: 2px solid #5d00ff;
+    width: 230px;
+    height: 60px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.Categories-store {
+    display: flex;
+    
+}
