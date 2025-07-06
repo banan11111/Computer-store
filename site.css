@@ -88,7 +88,7 @@
     width: 270px;
     height: 370px;
     margin: 5px;
-    border: 10px solid #6a6c9f;
+    border: 7px solid #6a6c9f;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -145,17 +145,20 @@ h1 {
     border: 3px solid #6a6c9f;
     align-items: center;
     text-align: center;
+    height: 60px;
 }
 
 .product-price-shelf {
     border: 3px solid #6a6c9f;
     align-items: center;
     text-align: center;
-
+    margin-top: 5px;
 }
 
 .product-image-shelf {
     width: 220px;
     height: auto;
     border: 3px solid #6a6c9f;
+    margin-bottom: 30px;
+    background-color: rgb(255, 255, 255);
 }
