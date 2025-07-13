@@ -121,21 +121,33 @@ h1 {
 .product-title {
     color: rgb(0, 0, 0);
     font-size: 24px;
+    border: 2px solid #000000;
 }
 
 .product-price {
     color: rgb(0, 0, 0);
     font-size: 50px;
+    border: 2px solid #000000;
 }
 
 .product-description {
     color: #000000;
+    border: 2px solid #000000;
 }
 
 .product-image {
     display: flex;
     width: 400px; 
     height: auto;
+    border: 2px solid #000000;
+}
+
+.back-to-products {
+    border: 2px solid #000000;
+}
+
+.add-to-cart-button {
+    border: 2px solid #000000;
 }
 
 .product-title-shelf {
