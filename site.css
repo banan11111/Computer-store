@@ -59,7 +59,9 @@
     height: 100px;
     border: 2px solid #bfff00;
     display: flex;
-    
+    font-size: 20px;
+    align-items: center;
+    text-align: center;
 }
 
 .Categories {
