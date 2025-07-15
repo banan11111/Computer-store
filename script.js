@@ -6,7 +6,10 @@ const products = {
         description: "Потужна видеокарта для ігор та графіки."
     },
     2: {
-
+        title: "Відеокарта",
+        price: "100 000 грн",
+        img: "12345.jpg",
+        description: "Потужна відеокарта для ігор та графікиааааа ааааааааааааааа ааааааааааааааа аааааааааа аааааааааааа."
     }
 };
 
@@ -38,7 +41,7 @@ if (window.location.pathname.includes("product.html")) {
                 });
 
                 localStorage.setItem("cart", JSON.stringify(cart));
-                alert("Товар додано до кошика!");
+                alert(" Товар додано до кошика!");
             });
         }
     } else {
@@ -49,23 +52,35 @@ if (window.location.pathname.includes("product.html")) {
 if (window.location.pathname.includes("basket.html")) {
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
     const container = document.getElementById("cart-container");
+    const template = document.getElementById("cart-template");
 
-    if (container) {
+    if (container && template) {
         if (cart.length === 0) {
             container.innerHTML = "<p> Кошик порожній</p>";
         } else {
-            cart.forEach(item => {
-                const div = document.createElement("div");
-                div.className = "cart-item";
-                div.innerHTML = `
-                    <h2>${item.title}</h2>
-                    <img src="${item.img}" alt="${item.title}" width="200">
-                    <p><strong>Ціна:</strong> ${item.price}</p>
-                    <p>${item.description}</p>
-                    <hr>
-                `;
-                container.appendChild(div);
+            cart.forEach((item, index) => {
+                const clone = template.content.cloneNode(true);
+
+                clone.querySelector(".item-title").textContent = item.title;
+                clone.querySelector(".item-image").src = item.img;
+                clone.querySelector(".item-image").alt = item.title;
+                clone.querySelector(".item-price").textContent = "Ціна: " + item.price;
+                clone.querySelector(".item-description").textContent = item.description;
+
+                const removeBtn = clone.querySelector(".remove-button");
+                removeBtn.addEventListener("click", () => {
+                    removeFromCart(index);
+                });
+
+                container.appendChild(clone);
             });
         }
     }
+}
+
+function removeFromCart(index) {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    cart.splice(index, 1);
+    localStorage.setItem("cart", JSON.stringify(cart));
+    location.reload();
 }

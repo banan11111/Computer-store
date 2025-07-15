@@ -1,16 +1,27 @@
 <!DOCTYPE html>
 <html lang="uk">
-    <head>
-         <meta charset="UTF-8">
-         <title>Кошик</title>
-         <link rel="stylesheet" href="site.css">
-    </head>
-        <body>
-        
-            <h1>Ваш кошик</h1>
-            <div id="cart-container"></div>
-        
-            <a href="main.html">← Назад</a>
-            <script src="script.js"></script>
-        </body>
+<head>
+    <meta charset="UTF-8">
+    <title>Кошик</title>
+    <link rel="stylesheet" href="site.css">
+</head>
+<body>
+    <h1>Ваш кошик</h1>
+
+    <div id="cart-container"></div>
+
+    <template id="cart-template">
+        <div class="cart-item">
+            <div class="item-title"></div>
+            <img class="item-image" src="" alt="">
+            <div class="item-price"></div>
+            <div class="item-description"></div>
+            <div class="remove-button">Видалити з кошика</div>
+        </div>
+    </template>
+
+    <a href="main.html">Назад до товарів</a>
+
+    <script src="script.js"></script>
+</body>
 </html>
