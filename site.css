@@ -125,51 +125,101 @@ h1 {
 .product-details {
     border: 2px solid #000000;
     padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #f0f0f0;
 }
 
 .product-image-container {
-    border: 2px solid #ff0000;
     width: 500px;
     height: 500px;
+    
 }
 
 .right-block-product {
-    border: 2px solid #40ff00;
     width: 500px;
     height: 500px;
+    
 }
 
+.product-price-and-button {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    width: 500px;
+    height: 60px;
+    border: none;
+    border-radius: 10px;
+}
 
 .product-title {
     color: rgb(0, 0, 0);
     font-size: 24px;
-    border: 2px solid #000000;
+    align-items: center;
+    text-align: center;
 }
 
 .product-price {
     color: rgb(0, 0, 0);
-    font-size: 50px;
-    border: 2px solid #000000;
+    font-size: 25px;
 }
 
 .product-description {
     color: #000000;
     border: 2px solid #000000;
+    height: 110px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    align-items: center;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    background-color: #ffffff;
 }
 
 .product-image {
     display: flex;
-    width: 400px; 
+    width: 450px; 
     height: auto;
-    border: 2px solid #000000;
+    align-items: center;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
 }
 
 .back-to-products {
     border: 2px solid #000000;
+    background-color: #2f2f2f;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 100px;
+    margin-right: 340px;
+}
+
+.back-to-products:hover {
+    background-color: #000000;
+    transform: scale(1.05);
 }
 
 .add-to-cart-button {
     border: 2px solid #000000;
+    margin-left: 30px;
+    background-color: #06b700;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 25px;
+}
+
+.add-to-cart-button:hover {
+    background-color: #069f01;
+    transform: scale(1.05);
 }
 
 .product-title-shelf {

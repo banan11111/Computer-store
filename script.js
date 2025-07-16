@@ -3,7 +3,7 @@ const products = {
         title: "Видеокарта",
         price: "25 000 грн",
         img: "12345.jpg",
-        description: "Потужна видеокарта для ігор та графіки."
+        description: "Відеокарта Gigabyte GeForce RTX 4060 GAMING OC 8G (GV-N4060GAMING OC-8GD)"
     },
     2: {
         title: "Відеокарта",
