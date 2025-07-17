@@ -186,17 +186,17 @@ h1 {
     text-align: center;
     border: none;
     border-radius: 10px;
+    margin-bottom: 20px;
 }
 
 .back-to-products {
-    border: 2px solid #000000;
     background-color: #2f2f2f;
     color: white;
     border: none;
     border-radius: 6px;
     font-size: 20px;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    margin-top: 100px;
+    margin-bottom: 100px;
     margin-right: 340px;
 }
 
@@ -333,4 +333,109 @@ h1 {
 .remove-button:hover {
     background-color: #c0392b;
     transform: scale(1.05);
+}
+
+.Site-basement {
+    border: 7px solid #ccc;
+    width: 1460px;
+    height: 250px;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: #e6e6e6;
+}
+
+.Our-contacts {
+    position: relative;
+    border: 7px solid #ccc;
+    width: 1460px;
+    height: 250px;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: #e6e6e6;
+}
+
+.About-us-home {
+    font-size: 60px;
+    text-align: center;
+}
+
+.About-us-description {
+    font-size: 30px;
+    text-align: center;
+}
+
+.Our-contacts-name {
+    font-size: 60px;
+    text-align: center;
+}
+
+.Phone-email {
+    border: 2px solid #000000;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    text-align: right;
+    margin-bottom: 30px;
+    margin-right: 30px;
+    padding: 20px;
+}
+
+.Phone {
+    text-align: start;
+    font-size: 20px;
+}
+
+.Email {
+    text-align: start;
+    font-size: 20px;
+}
+
+.contacts-block {
+    width: 500px;
+    margin-top: 70px;
+    margin-left: 30px;
+}
+
+.instagram {
+    background-image: url('instagram.jpg');
+    width: 70px;
+    height: 70px;
+    display: inline-block;
+    border: 2px solid #ccc;
+    background-size: contain;     
+    background-repeat: no-repeat; 
+    background-position: center;
+}
+
+.facebook {
+    background-image: url('facebook.png');
+    width: 70px;
+    height: 70px;
+    display: inline-block;
+    border: 2px solid #ccc;
+    background-size: contain;     
+    background-repeat: no-repeat; 
+    background-position: center;
+}
+
+.tiktok {
+    background-image: url('tittoc.jpg');
+    width: 70px;
+    height: 70px;
+    display: inline-block;
+    border: 2px solid #ccc;
+    background-size: contain;     
+    background-repeat: no-repeat; 
+    background-position: center;
+}
+
+.youtube {
+    background-image: url('youtube.png');
+    width: 70px;
+    height: 70px;
+    display: inline-block;
+    border: 2px solid #ccc;
+    background-size: contain;     
+    background-repeat: no-repeat; 
+    background-position: center;
 }

@@ -1,15 +1,39 @@
 const products = {
     1: {
-        title: "Видеокарта",
-        price: "25 000 грн",
+        title: "Відеокарта",
+        price: "17 999 грн",
         img: "12345.jpg",
         description: "Відеокарта Gigabyte GeForce RTX 4060 GAMING OC 8G (GV-N4060GAMING OC-8GD)"
     },
     2: {
         title: "Відеокарта",
-        price: "100 000 грн",
-        img: "12345.jpg",
-        description: "Потужна відеокарта для ігор та графікиааааа ааааааааааааааа ааааааааааааааа аааааааааа аааааааааааа."
+        price: "14 999 грн",
+        img: "123.jpg",
+        description: "Відеокарта Gigabyte PCI-Ex GeForce RTX 3060 Gaming OC 12GB GDDR6"
+    },
+    3: {
+        title: "Відеокарта",
+        price: "9 999 грн",
+        img: "321.webp",
+        description: "Відеокарта GeForce RTX 2060 GIGABYTE 6GB GDDR6"
+    },
+    4: {
+        title: "Процесор",
+        price: "5 499 грн",
+        img: "i3.jpg",
+        description: "Процесор Intel Core i3-14100 3.5GHz/12MB (BX8071514100) s1700 BOX"
+    },
+    5: {
+        title: "Процесор",
+        price: "9 999 грн",
+        img: "i5.jpg",
+        description: "Процесор Intel Core i5-14600KF 3.5GHz/24MB (BX8071514600KF) s1700 BOX"
+    },
+    6: {
+        title: "Процесор",
+        price: "Ціна: 16 999 грн",
+        img: "i7.jpg",
+        description: "Процесор Intel Core i7-14700K 3.4GHz/33MB (BX8071514700K) s1700 BOX"
     }
 };
 
