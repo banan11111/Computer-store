@@ -34,43 +34,37 @@ const products = {
         price: "Ціна: 16 999 грн",
         img: "i7.jpg",
         description: "Процесор Intel Core i7-14700K 3.4GHz/33MB (BX8071514700K) s1700 BOX"
-    }
+    },
 };
 
-const params = new URLSearchParams(window.location.search);
-const id = params.get("id");
-const product = products[id];
+function openProduct(id) {
+    window.location.href = `product.html?id=${id}`;
+}
 
 if (window.location.pathname.includes("product.html")) {
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("id");
+    const product = products[id];
+
     if (product) {
-        document.querySelector(".product-title").textContent = product.title;
+    document.querySelector(".product-title").textContent = product.title;
+    const image = document.querySelector(".product-image");
+    image.src = product.img;
+    image.alt = product.title;
 
-        const image = document.querySelector(".product-image");
-        image.src = product.img;
-        image.alt = product.title;
+    document.querySelector(".product-price").textContent = "Ціна: " + product.price;
+    document.querySelector(".product-description").textContent = product.description;
 
-        document.querySelector(".product-price").textContent = "Ціна: " + product.price;
-        document.querySelector(".product-description").textContent = product.description;
-
-        const button = document.getElementById("add-to-cart");
-        if (button) {
-            button.addEventListener("click", () => {
-                const cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-                cart.push({
-                    title: product.title,
-                    price: product.price,
-                    img: product.img,
-                    description: product.description
-                });
-
-                localStorage.setItem("cart", JSON.stringify(cart));
-                alert(" Товар додано до кошика!");
-            });
-        }
-    } else {
-        document.querySelector(".product-details").innerHTML = "<h2>Товар не знайдено</h2>";
+    const addBtn = document.querySelector(".add-to-cart");
+    if (addBtn) {
+        addBtn.addEventListener("click", () => {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            cart.push(product);
+            localStorage.setItem("cart", JSON.stringify(cart));
+            alert("Товар додано до кошика!");
+        });
     }
+}
 }
 
 if (window.location.pathname.includes("basket.html")) {
@@ -84,15 +78,13 @@ if (window.location.pathname.includes("basket.html")) {
         } else {
             cart.forEach((item, index) => {
                 const clone = template.content.cloneNode(true);
-
                 clone.querySelector(".item-title").textContent = item.title;
                 clone.querySelector(".item-image").src = item.img;
                 clone.querySelector(".item-image").alt = item.title;
                 clone.querySelector(".item-price").textContent = "Ціна: " + item.price;
                 clone.querySelector(".item-description").textContent = item.description;
 
-                const removeBtn = clone.querySelector(".remove-button");
-                removeBtn.addEventListener("click", () => {
+                clone.querySelector(".remove-button").addEventListener("click", () => {
                     removeFromCart(index);
                 });
 
@@ -100,11 +92,62 @@ if (window.location.pathname.includes("basket.html")) {
             });
         }
     }
+
+    function removeFromCart(index) {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        cart.splice(index, 1);
+        localStorage.setItem("cart", JSON.stringify(cart));
+        location.reload();
+    }
 }
 
-function removeFromCart(index) {
+if (window.location.pathname.includes("checkout.html")) {
+    const container = document.getElementById("checkout-products");
+    const template = document.getElementById("cart-template");
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
-    cart.splice(index, 1);
-    localStorage.setItem("cart", JSON.stringify(cart));
-    location.reload();
+
+    if (container && template) {
+        if (cart.length === 0) {
+            container.innerHTML = "<p> Ваш кошик порожній</p>";
+        } else {
+            cart.forEach(item => {
+                const clone = template.content.cloneNode(true);
+                clone.querySelector(".item-title").textContent = item.title;
+                clone.querySelector(".item-image").src = item.img;
+                clone.querySelector(".item-image").alt = item.title;
+                clone.querySelector(".item-price").textContent = "Ціна: " + item.price;
+                clone.querySelector(".item-description").textContent = item.description;
+
+                container.appendChild(clone);
+            });
+        }
+    }
+
+    const form = document.getElementById("order-form");
+    const message = document.getElementById("confirmation-message");
+
+    form?.addEventListener("submit", function (e) {
+        e.preventDefault();
+        message.textContent = " Дякуємо! Ваше замовлення прийнято.";
+        localStorage.removeItem("cart");
+        container.innerHTML = "";
+        form.reset();
+    });
 }
+
+const orderContainer = document.getElementById("order-container");
+const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+cart.forEach(product => {
+    const item = document.createElement("div");
+    item.classList.add("order-item");
+
+    item.innerHTML = `
+        <h2 class="item-title">${product.title}</h2>
+        <img class="item-image" src="${product.img}" alt="${product.title}">
+        <p class="item-price">Ціна: ${product.price}</p>
+        <p class="item-description">${product.description}</p>
+    `;
+
+    orderContainer.appendChild(item);
+});

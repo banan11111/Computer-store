@@ -8,19 +8,30 @@
 <body>
     <h1>Ваш кошик</h1>
 
-    <div id="cart-container"></div>
-
-    <template id="cart-template">
-        <div class="cart-item">
-            <div class="item-title"></div>
-            <img class="item-image" src="" alt="">
-            <div class="item-price"></div>
-            <div class="item-description"></div>
-            <div class="remove-button">Видалити з кошика</div>
+    <div class="main-order">
+        <div class ="item-form-container">
+            <div class = "item-buttons">
+                <a href="checkout.html" class="checkout-button">Оформити замовлення</a>
+                
+                <a href="main.html" class="back-button">Назад до товарів</a>
+            </div>
         </div>
-    </template>
 
-    <a href="main.html">Назад до товарів</a>
+        <div class="order-products">
+
+            <div id="cart-container"></div>
+
+            <template id="cart-template">
+                <div class="cart-item">
+                    <div class="item-title"></div>
+                    <img class="item-image" src="" alt="">
+                    <div class="item-price"></div>
+                    <div class="item-description"></div>
+                    <div class="remove-button">Видалити з кошика</div>  
+                </div>
+            </template>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

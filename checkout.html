@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Оформлення замовлення</title>
+    <link rel="stylesheet" href="site.css">
+</head>
+<body>
+
+    <h1>Оформлення замовлення</h1>
+
+    <div class="main-order">
+        <div class="order-form-container">
+            <form id="order-form">
+                <div class = "Order">
+                    <label for="name">Ім’я:</label><br>
+                    <input class = "order-name" type="text" id="name" name="name" required><br><br>
+
+                    <label for="address">Адреса доставки:</label><br>
+                    <input class = "order-name" type="text" id="address" name="address" required><br><br>
+
+                    <label for="phone">Номер телефону:</label><br>
+                    <input class = "order-name" type="text" id="phone" name="phone" required><br><br>
+
+                    <label for="email">Email:</label><br>
+                    <input class = "order-name" type="email" id="email" name="email" required><br><br>
+
+                    <label for="address">Адреса доставки:</label><br>
+                    <input class = "order-name" type="text" id="address" name="address" required><br><br>
+                </div>
+
+                <button class="confirm-button" type="submit"> Підтвердити замовлення</button>
+            </form>
+
+            <p id="confirmation-message"></p>
+
+            <a class="back-button" href="basket.html"> Назад до кошика</a>
+        </div>
+
+        <div class="order-products">
+
+            <div id="order-container"></div>
+
+            <template id="cart-template">
+                <div class="order-item">
+                    <div class="item-title"></div>
+                    <img class="item-image" src="" alt="">
+                    <div class="item-price"></div>
+                    <div class="item-description"></div>
+                </div>
+            </template>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
