@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 a {
     text-decoration: none;
 }
@@ -5,12 +9,13 @@ a {
 .header {
     display: flex;
     flex-direction: column;
-    border: 2px solid #000000;
 }
 
 .container {
     display: flex;
-    border: 2px solid #000000;
+    border: 5px solid #ccc;
+    background-color: #f0f0f0;
+    border-radius: 10px;
 }
 
 .logo {
@@ -18,8 +23,14 @@ a {
     flex-direction: column;
     width: 300px;
     height: 200px;
-    border: 2px solid #ff0000;
     margin: 10px;
+    background-image: url(https://static.tildacdn.one/tild6363-6633-4162-b235-633564633464/_.svg);
+    background-size: contain;     
+    background-repeat: no-repeat; 
+    background-position: center;
+    border: 4px solid #ccc;
+    border-radius: 10px;
+    background-color: #ffffff;
 }
 
 .search-container {
@@ -33,56 +44,69 @@ a {
     flex-direction: row;
     width: 600px;
     height: 50px;
-    border: 2px solid #00ff00;
+    border: 4px solid #ccc;
     margin-top: 15px;
     border-radius: 20px;
-
+    background-color: #ffffff;
+    font-size: 25px;
+    align-items: center;
+    
 }
 
 .search-buttons {
     display: flex;
     flex-direction: row;
-    
 }
 
-
-.Main, .Promotions, .Reviews, .Contacts, .About-us {
+.Contacts, .About-us {
     width: 150px;
     height: 90px;
-    border: 2px solid #bfff00;
+    border: 4px solid #ccc;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-left: 3px;
     margin-top: 40px;
-    
+    font-size: 20px;
+    border-radius: 10px;
+    color: black;
+    background-color: #ffffff;
 }
 
-.favorite, .Basket {
+.Basket {
+    background-image: url('bascet.png');
     width: 100px;
     height: 100px;
-    border: 2px solid #bfff00;
-    display: flex;
-    font-size: 20px;
-    align-items: center;
-    text-align: center;
+    display: inline-block;
+    border: 4px solid #ccc;
+    background-size: contain;     
+    background-repeat: no-repeat; 
+    background-position: center;
+    border-radius: 10px;
+    background-color: #ffffff;
+    margin-left: 275px;
 }
 
 .Categories {
     display: flex;
     flex-direction: column;
-    border: 2px solid #1e00ff;
+    border: 3px solid #ccc;
     border-radius: 15px;
     margin-left: 10px;
-    margin-top: 10px
+    margin-top: 10px;
+    height: 400px;
+    background-color: #f0f0f0;
 }
 
 .category {
-    border: 2px solid #5d00ff;
+    border: 3px solid #ccc;
     width: 230px;
     height: 60px;
-    margin: 5px;
+    margin: 7px;
     border-radius: 5px;
+    background-color: #ffffff;
+    align-items: center;
+    text-align: center;
 }
 
 .Categories-store {
@@ -100,6 +124,11 @@ a {
     justify-content: center;
     border-radius: 10px;
     background-color: #ffffff;
+    transition: transform 0.2s ease;
+}
+
+.products:hover {
+    transform: scale(1.05);
 }
 
 .Shelf {
